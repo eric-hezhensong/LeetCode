@@ -3,41 +3,25 @@
 
 class Solution(object):
     """
-    Valid Palindrome II
+    Valid Palindrome
     """
 
     @staticmethod
-    def valid_palindrome(s):
+    def is_palindrome(s):
         """
         :type s: str
         :rtype: bool
         """
-        string = '#%s#' % s
-        length = len(string)
-        i = 0
-        j = length - 1
+        if s is None:
+            return True
 
+        i, j = 0, len(s) - 1
         while i < j:
-            if string[i] == string[j]:
+            while i < j and s[i].isalnum() is False:
                 i += 1
+            while j > i and s[j].isalnum() is False:
                 j -= 1
-                continue
-            else:
-                left = Solution.palindrome(string[i + 1:j + 1])
-                right = Solution.palindrome(string[i:j])
-
-                if left or right:
-                    return True
-                else:
-                    return False
-        return True
-
-    @staticmethod
-    def palindrome(s):
-        length = len(s)
-        i, j = 0, length - 1
-        while i < j:
-            if s[i] != s[j]:
+            if s[i].lower() != s[j].lower():
                 return False
             i += 1
             j -= 1
@@ -48,11 +32,8 @@ class Solution(object):
 if __name__ == '__main__':
     solution = Solution()
 
-    a = "aba"
-    print solution.valid_palindrome(a)
+    a = "A man, a plan, a canal: Panama"
+    print solution.is_palindrome(a)
 
     a = "abcad"
-    print solution.valid_palindrome(a)
-
-    a = "ebcbbececabbacecbbcbe"
-    print solution.valid_palindrome(a)
+    print solution.is_palindrome(a)
