@@ -6,7 +6,8 @@ class Solution(object):
     026. Remove Duplicates from Sorted Array
     """
 
-    def removeDuplicates(self, nums):
+    @staticmethod
+    def remove_duplicates(nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -28,7 +29,9 @@ class Solution(object):
         return length
 
 
-nums = [1, 1, 2]
-s = Solution()
-n = s.removeDuplicates(nums)
-print n, nums
+if __name__ == '__main__':
+    solution = Solution()
+
+    nums1 = [1, 1, 2]
+    n = solution.remove_duplicates(nums1)
+    print n, nums1
