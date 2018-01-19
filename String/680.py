@@ -49,10 +49,10 @@ if __name__ == '__main__':
     solution = Solution()
 
     a = "aba"
-    print solution.valid_palindrome(a)
+    print(solution.valid_palindrome(a))
 
     a = "abcad"
-    print solution.valid_palindrome(a)
+    print(solution.valid_palindrome(a))
 
     a = "ebcbbececabbacecbbcbe"
-    print solution.valid_palindrome(a)
+    print(solution.valid_palindrome(a))

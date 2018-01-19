@@ -28,7 +28,7 @@ if __name__ == '__main__':
     solution = Solution()
 
     a = 232
-    print solution.is_palindrome(a)
+    print(solution.is_palindrome(a))
 
     a = 245
-    print solution.is_palindrome(a)
+    print(solution.is_palindrome(a))

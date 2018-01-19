@@ -34,4 +34,4 @@ if __name__ == '__main__':
 
     nums1 = [1, 1, 2]
     n = solution.remove_duplicates(nums1)
-    print n, nums1
+    print(n, nums1)

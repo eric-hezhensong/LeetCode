@@ -33,7 +33,7 @@ if __name__ == '__main__':
     solution = Solution()
 
     a = "A man, a plan, a canal: Panama"
-    print solution.is_palindrome(a)
+    print(solution.is_palindrome(a))
 
     a = "abcad"
-    print solution.is_palindrome(a)
+    print(solution.is_palindrome(a))

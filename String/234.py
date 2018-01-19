@@ -50,4 +50,4 @@ if __name__ == '__main__':
     node1.next = node2
 
     solution = Solution()
-    print solution.is_palindrome(node1)
+    print(solution.is_palindrome(node1))
